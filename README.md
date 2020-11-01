@@ -66,7 +66,14 @@ We can see that, penalty is set to l2, l1_ratio is 0.8367,learning rate is const
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
-AutoML indicated that dataset was imbalanced just before training the model. In order to improve model performance, we will use methods like oversampling, undersampling and/or SMOTE to balance the dataset before training. This wil ensure that the model is actually identifying the minority class correctly.
+AutoML indicated that dataset was imbalanced just before training the model. In order to improve model performance, we will use methods like oversampling, undersampling and/or SMOTE to balance the dataset before training. **This will improve the model performance that by ensuring that the model is actually identifying the minority class correctly.**
+
+In addition, to improve model performance, more data cleaning will be done. Some cleaning strategies include:
+- Some columns don't seem necessary like the `default` column. 
+- Drop columns that are highly correlated using methods like principal components analysis. We drop these columns because they bring the same information to the model, so it is logical to remove one of them. 
+- Check for outliers in numerical columns like `age` and remove them. Outliers have to be removed because they can cause the results of predictions to be skewed either positively or negatively which affects model performance negatively. 
+
+Doing all these, will go a long way to improve model performance as explained above.
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
